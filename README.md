@@ -38,8 +38,8 @@ def __init__(
 
 #### Pin Numbering
 This package uses gpio.BOARD (pin numbering as opposed to GPIO numbering).
-![Pin Numbering Example](https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg)
-![74HC595 Pinout](https://protostack.com.au/wp-content/uploads/shift_register_09.jpg)
+<img alt="Pin Numbering Example" src="https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg" width="60%">
+<img alt="74HC595 Pinout" src="https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png" width="40%">
 
 You will likely need to change the Raspberry Pi pins during initialization. 
 ```python

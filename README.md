@@ -10,7 +10,7 @@ Allows for easy use of the 74HC595 Shift Register with a Raspberry Pi
 
 ## Install
 ```bash
-$ pip install stockfish
+$ pip install pi74HC595
 ```
 
 ## Usage
@@ -28,7 +28,6 @@ shift_register = pi74HC595()
 There are some default settings:
 ```python
 def __init__(
-        self,
         DS: int = 11,
         ST: int = 13,
         SH: int = 15,
@@ -37,23 +36,26 @@ def __init__(
     )
 ```
 
-##### Pin Numbering
+#### Pin Numbering
+This package uses gpio.BOARD (pin numbering as opposed to GPIO numbering).
+![Pin Numbering Example](https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg)
+![74HC595 Pinout](https://protostack.com.au/wp-content/uploads/shift_register_09.jpg)
 
-You will likely need to change the Raspberry Pi pins during initialization. This package uses gpio.BOARD (pin numbering as opposed to GPIO numbering):
+You will likely need to change the Raspberry Pi pins during initialization. 
 ```python
 shift_register = pi74HC595(7, 37, 22)
 ```
 
-These can also be set after initialization with 
+These can also be set after initialization with...
 ```python
 shift_register.set_ds(7)
 shift_register.set_sh(37)
 shift_register.set_st(22)
 ```
 
-##### Daisy Chaining
+#### Daisy Chaining
 
-If you are daisy chaining multiple 74HC595s then you will can set daisy_chain during initialization.
+If you are daisy chaining multiple 74HC595s then you can set daisy_chain to your number of 74HC595s during initialization.
 ```python
 shift_register = pi74HC595(7, 37, 22, daisy_chain = 2)
 
@@ -62,21 +64,19 @@ shift_register = pi74HC595(daisy_chain = 13)
 # etc
 ```
 
-This can also be done after initialization with 
+This can also be done after initialization with...
 ```python
 shift_register.set_daisy_chain(3) # Any positive int
 ```
 
 
-##### Remembering Previous State
+#### Remembering Previous Statess
 
-The default behaviour of a 74HC595 is that if a single new value is passed and the storage register is clocked, 
-the old valuesa are "forgotten"
+The default behaviour of a 74HC595 is that if the storage register is clocked, the old values are "forgotten".
 
-ie if current state is "10101010" and "1" is sent, the new state is "10000000"
-I built this package to fix this for my purposes, so if "1" is sent it will update to "11010101"
-
-You can remove this functionality and keep the 74HC595 from "remembering" the past state during initialization.
+If the current state is "10101010" and "1" is sent, the new state is "10000000".
+pi74HC595 preserves the previous state so if "1" is sent it will update to "11010101".
+This functionality can be removed during initialization.
 ```python
 shift_register = pi74HC595(7, 37, 22, daisy_chain = 2, remember = False)
 
@@ -85,7 +85,7 @@ shift_register = pi74HC595(remember = False)
 # etc
 ```
 
-This can also be done after initialization with 
+This can also be done after initialization with...
 ```python
 shift_register.set_remember(False) # True or False
 ```
@@ -143,7 +143,7 @@ $ python setup.py test
 ```
 
 ## Credits
-- [Ilya Zhelyabuzhsky](https://github.com/2kofawsome)
+- [Sam Gunter](https://github.com/2kofawsome)
 
 ## License
 MIT License. Please see [License File](LICENSE) for more information.

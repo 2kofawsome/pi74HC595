@@ -2,15 +2,25 @@ import RPi.GPIO as gpio
 
 gpio.setmode(gpio.BOARD)
 
+
 class pi74HC595:
-    def __init__(self, DS: int = 11, ST: int = 13, SH: int = 15, daisy_chain: int = 1, remember: bool = True):
+    def __init__(
+        self,
+        DS: int = 11,
+        ST: int = 13,
+        SH: int = 15,
+        daisy_chain: int = 1,
+        remember: bool = True,
+    ):
 
         self.data = DS  # DS
         self.parallel = ST  # ST_CP
         self.serial = SH  # SH_CP
-        self.daisy_chain = daisy_chain # Number of 74HC595s
+        self.daisy_chain = daisy_chain  # Number of 74HC595s
         self.current = [0, 0, 0, 0, 0, 0, 0, 0] * self.daisy_chain
-        self.remember = remember # If past state is saved, default is to remember (True)
+        self.remember = (
+            remember  # If past state is saved, default is to remember (True)
+        )
         self._setup_board()
         self.clear()
 
@@ -54,7 +64,7 @@ class pi74HC595:
 
         """
         self.data = DS
-        
+
     def set_sh(self, pin):
         """
         Sets the pin for the shift register clock pin (SH_CP)
@@ -63,7 +73,7 @@ class pi74HC595:
 
         """
         self.parallel = DS
-        
+
     def set_st(self, pin):
         """
         Sets the pin for the storage register clock pin (ST_CP)

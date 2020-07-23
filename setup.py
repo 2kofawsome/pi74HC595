@@ -11,7 +11,7 @@ setup(
     license="MIT",
     keywords="Raspberry Pi GPIO 74HC595",
     url="https://github.com/2kofawsome/pi74HC595",
-    description="Allows easy use of the 74HC595 shift register",
+    description="Use the 74HC595 Shift Register with a Raspberry Pi",
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(),

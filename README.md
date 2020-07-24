@@ -42,7 +42,9 @@ def __init__(
 
 ### Pin Numbering
 
-![Pin Numbering Example](https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg) ![74HC595 Pinout](https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png)
+Raspberry Pi Numbering     |  74HC595 Pinout
+:-------------------------:|:-------------------------:
+![Pin Numbering Example](https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg)  |  ![74HC595 Pinout](header_pinout.jpg)
 
 
 <p style="text-align: center;"><i>Both Vcc and MR require 5V</i></p>

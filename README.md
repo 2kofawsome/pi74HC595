@@ -19,7 +19,7 @@ $ pip install pi74HC595
 You should install the stockfish engine in your operating system globally or specify path to binary file in class constructor
 
 ```python
-import pi74HC595
+from pi74HC595 import pi74HC595
 import RPi.GPIO as gpio
 
 gpio.setmode(gpio.BOARD)
@@ -44,7 +44,7 @@ def __init__(
 
 Raspberry Pi Numbering     |  74HC595 Pinout
 :-------------------------:|:-------------------------:
-![Pin Numbering Example](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/Pi_pinout)  |  ![74HC595 Pinout](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/74HC595_pinout.png)
+![Pin Numbering Example](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/Pi_pinout.jpg)  |  ![74HC595 Pinout](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/74HC595_pinout.png)
 
 
 <p align="center"><i>Both Vcc and MR require 5V</i></p>
@@ -151,6 +151,7 @@ shift_register.get_values()
 It took me awhile to finally understand how the 74HC595 worked since I had no prior hardware experience. These are the tutorials I used to understand the shift register.
 
 [Great but with Arduino](https://lastminuteengineers.com/74hc595-shift-register-arduino-tutorial/)
+
 [Good and with Raspberry Pi](https://circuitdigest.com/microcontroller-projects/raspberry-pi-74hc595-shift-register-tutorial)
 
 ## Credits

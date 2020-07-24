@@ -3,9 +3,10 @@
 Allows for easy use of the 74HC595 Shift Register with a Raspberry Pi
 
 <p>
-    <a href="https://pypi.org/project/pi74HC595/"><img src="https://img.shields.io/pypi/v/pi74HC595" alt="Pypi version" height="18"></a>
-    <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.x-blue.svg" alt="Python version" height="18"></a>
-    <a href="https://github.com/2kofawsome/pi74HC595/blob/master/LICENSE"><img src="https://img.shields.io/github/license/2kofawsome/pi74HC595" alt="License" height="18"></a>
+	<a href="https://pypi.org/project/pi74HC595/"><img src="https://img.shields.io/pypi/v/pi74HC595" alt="Pypi version" height="18"></a>
+	<a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.x-blue.svg" alt="Python version" height="18"></a>
+	<a href="https://github.com/2kofawsome/pi74HC595/blob/master/LICENSE"><img src="https://img.shields.io/github/license/2kofawsome/pi74HC595" alt="License" height="18"></a>
+	<a href="https://pepy.tech/project/pi74hc595"><img src="https://pepy.tech/badge/pi74hc595" alt="Downloads" height="18"></a>
 </p>
 
 ## Install
@@ -41,10 +42,9 @@ def __init__(
 
 ### Pin Numbering
 
-Raspberry Pi Numbering     |  74HC595 Pinout
+Raspberry Pi Pinout     |  74HC595 Pinout
 :-------------------------:|:-------------------------:
-![Pin Numbering Example](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/Pi_pinout.jpg)  |  ![74HC595 Pinout](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/74HC595_pinout.png)
-
+![Raspberry Pi Pinout](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/Pi_pinout.jpg)  |  ![74HC595 Pinout](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/74HC595_pinout.png)
 
 <p align="center"><i>Both Vcc and MR require 5V</i></p>
 

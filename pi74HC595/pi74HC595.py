@@ -1,7 +1,5 @@
 import RPi.GPIO as gpio
 
-gpio.setmode(gpio.BOARD)
-
 
 class pi74HC595:
     def __init__(

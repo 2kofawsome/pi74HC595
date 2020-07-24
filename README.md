@@ -21,9 +21,14 @@ You should install the stockfish engine in your operating system globally or spe
 
 ```python
 import pi74HC595
+import RPi.GPIO as gpio
 
+gpio.setmode(gpio.BOARD)
+gpio.setwarnings(False)
 shift_register = pi74HC595()
 ```
+
+<p style="text-align: center;"><i>This package uses gpio.BOARD (pin numbering as opposed to GPIO numbering)</i></p>
 
 There are some default settings:
 ```python
@@ -37,10 +42,11 @@ def __init__(
 ```
 
 #### Pin Numbering
-This package uses gpio.BOARD (pin numbering as opposed to GPIO numbering).
 
-<img alt="Pin Numbering Example" src="https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg" height="400">
-<img alt="74HC595 Pinout" src="https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png" height="200">
+<img alt="Pin Numbering Example" src="https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg" height="350">
+<img alt="74HC595 Pinout" src="https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png" height="150">
+
+<p style="text-align: center;"><i>Both Vcc and MR require 5V</i></p>
 
 You will likely need to change the Raspberry Pi pins during initialization. 
 ```python
@@ -137,11 +143,6 @@ shift_register.get_values()
 [0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
-
-## Testing
-```bash
-$ python setup.py test
-```
 
 ## Credits
 - [Sam Gunter](https://github.com/2kofawsome)

@@ -36,7 +36,6 @@ def __init__(
         ST: int = 13,
         SH: int = 15,
         daisy_chain: int = 1,
-        remember: bool = True,
     )
 ```
 
@@ -56,7 +55,7 @@ shift_register = pi74HC595(7, 37, 22)
 
 These can also be set after initialization with...
 ```python
-shift_register.set_ds(7)
+shift_register.set_ds(7) # Any GPIO pin on Raspberry Pi
 shift_register.set_sh(37)
 shift_register.set_st(22)
 ```
@@ -65,7 +64,7 @@ shift_register.set_st(22)
 
 If you are daisy chaining multiple 74HC595s then you can set daisy_chain to your number of 74HC595s during initialization.
 ```python
-shift_register = pi74HC595(7, 37, 22, daisy_chain = 2)
+shift_register = pi74HC595(7, 37, 22, 2)
 
 shift_register = pi74HC595(daisy_chain = 13)
 
@@ -76,28 +75,6 @@ This can also be done after initialization with...
 ```python
 shift_register.set_daisy_chain(3) # Any positive int
 ```
-
-
-### Remembering Previous Statess
-
-The default behaviour of a 74HC595 is that if the storage register is clocked, the old values are "forgotten".
-
-If the current state is "10101010" and "1" is sent, the new state is "10000000".
-pi74HC595 preserves the previous state so if "1" is sent it will update to "11010101".
-This functionality can be removed during initialization.
-```python
-shift_register = pi74HC595(7, 37, 22, daisy_chain = 2, remember = False)
-
-shift_register = pi74HC595(remember = False)
-
-# etc
-```
-
-This can also be done after initialization with...
-```python
-shift_register.set_remember(False) # True or False
-```
-
 
 ## Usage
 
@@ -112,7 +89,7 @@ shift_register.set_by_list([False, True, False,...])
 ### Set Values with an Integer:
 
 This was created with the intent to send a single 1 or 0 for on or off,
-but can also function with a larger int by converting to binary
+but can also function with a larger int as it converts to binary
 ```python
 shift_register.set_by_int(0)
 shift_register.set_by_int(1)
@@ -131,14 +108,14 @@ shift_register.set_by_bool(False)
 
 ### Clear All Current Values:
 
-Sets each value that is remembered to off (0)
+Sets each value to off (0)
 ```python
 shift_register.clear()
 ```
 
 ### Get All Current Values:
 
-Returns the current values, only when remember is set True
+Returns the current values
 ```python
 shift_register.get_values()
 ```

@@ -44,7 +44,19 @@ def __init__(
 
 Raspberry Pi Numbering     |  74HC595 Pinout
 :-------------------------:|:-------------------------:
-![Pin Numbering Example](https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg)  |  ![74HC595 Pinout](header_pinout.jpg)
+![Pin Numbering Example](https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg)  |  ![74HC595 Pinout](https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png)
+
+Raspberry Pi Numbering     |  74HC595 Pinout
+:-------------------------:|:-------------------------:
+![Pin Numbering Example](https://resizeimage.net/viewimg/Hiaad9gX6se7CWCv/gqRU8/header_pinout.jpg)  |  ![74HC595 Pinout](https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png)
+
+Raspberry Pi Numbering     |  74HC595 Pinout
+:-------------------------:|:-------------------------:
+![Pin Numbering Example](https://resizeimage.net/viewimg/MKLvEhHT0AmpX3ay/gzyay/header_pinout.jpg)  |  ![74HC595 Pinout](https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png)
+
+Raspberry Pi Numbering     |  74HC595 Pinout
+:-------------------------:|:-------------------------:
+![Pin Numbering Example](https://resizeimage.net/viewimg/MKLvEhHT0AmpX3ay/ghvgh/header_pinout.jpg)  |  ![74HC595 Pinout](https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png)
 
 
 <p style="text-align: center;"><i>Both Vcc and MR require 5V</i></p>

@@ -13,9 +13,8 @@ Allows for easy use of the 74HC595 Shift Register with a Raspberry Pi
 $ pip install pi74HC595
 ```
 
-## Usage
 
-### Initialize pi74HC595 class
+## Initialize pi74HC595 class
 
 You should install the stockfish engine in your operating system globally or specify path to binary file in class constructor
 
@@ -24,13 +23,13 @@ import pi74HC595
 import RPi.GPIO as gpio
 
 gpio.setmode(gpio.BOARD)
-gpio.setwarnings(False)
 shift_register = pi74HC595()
 ```
 
-<p style="text-align: center;"><i>This package uses gpio.BOARD (pin numbering as opposed to GPIO numbering)</i></p>
+<p style="text-align:center;"><i>This package uses gpio.BOARD (pin numbering as opposed to GPIO numbering)</i></p>
 
-There are some default settings:
+### There are some default settings:
+
 ```python
 def __init__(
         DS: int = 11,
@@ -41,9 +40,9 @@ def __init__(
     )
 ```
 
-#### Pin Numbering
+### Pin Numbering
 
-<img alt="Pin Numbering Example" src="https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg" height="350">
+<img alt="Pin Numbering Example" src="https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg" height="300">
 <img alt="74HC595 Pinout" src="https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png" height="150">
 
 <p style="text-align: center;"><i>Both Vcc and MR require 5V</i></p>
@@ -60,7 +59,7 @@ shift_register.set_sh(37)
 shift_register.set_st(22)
 ```
 
-#### Daisy Chaining
+### Daisy Chaining
 
 If you are daisy chaining multiple 74HC595s then you can set daisy_chain to your number of 74HC595s during initialization.
 ```python
@@ -77,7 +76,7 @@ shift_register.set_daisy_chain(3) # Any positive int
 ```
 
 
-#### Remembering Previous Statess
+### Remembering Previous Statess
 
 The default behaviour of a 74HC595 is that if the storage register is clocked, the old values are "forgotten".
 
@@ -97,6 +96,8 @@ This can also be done after initialization with...
 shift_register.set_remember(False) # True or False
 ```
 
+
+## Usage
 
 ### Set Values with a List:
 

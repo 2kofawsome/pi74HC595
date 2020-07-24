@@ -26,7 +26,7 @@ gpio.setmode(gpio.BOARD)
 shift_register = pi74HC595()
 ```
 
-<p style="text-align:center;"><i>This package uses gpio.BOARD (pin numbering as opposed to GPIO numbering)</i></p>
+<p align="center"><i>This package uses gpio.BOARD (pin numbering as opposed to GPIO numbering)</i></p>
 
 ### There are some default settings:
 
@@ -44,18 +44,10 @@ def __init__(
 
 Raspberry Pi Numbering     |  74HC595 Pinout
 :-------------------------:|:-------------------------:
-![Pin Numbering Example](https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg)  |  ![74HC595 Pinout](https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png)
-
-Raspberry Pi Numbering     |  74HC595 Pinout
-:-------------------------:|:-------------------------:
-![Pin Numbering Example](header_pinout.jpg)  |  ![74HC595 Pinout](https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png)
-
-Raspberry Pi Numbering     |  74HC595 Pinout
-:-------------------------:|:-------------------------:
-![Pin Numbering Example](Webp.net-resizeimage.jpg)  |  ![74HC595 Pinout](https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png)
+![Pin Numbering Example](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/Pi_pinout)  |  ![74HC595 Pinout](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/74HC595_pinout.png)
 
 
-<p style="text-align: center;"><i>Both Vcc and MR require 5V</i></p>
+<p align="center"><i>Both Vcc and MR require 5V</i></p>
 
 You will likely need to change the Raspberry Pi pins during initialization. 
 ```python
@@ -154,6 +146,12 @@ shift_register.get_values()
 [0, 0, 0, 0, 0, 0, 0, 0]
 ```
 
+## Good 74HC595 Tutorials
+
+It took me awhile to finally understand how the 74HC595 worked since I had no prior hardware experience. These are the tutorials I used to understand the shift register.
+
+[Great but with Arduino](https://lastminuteengineers.com/74hc595-shift-register-arduino-tutorial/)
+[Good and with Raspberry Pi](https://circuitdigest.com/microcontroller-projects/raspberry-pi-74hc595-shift-register-tutorial)
 
 ## Credits
 - [Sam Gunter](https://github.com/2kofawsome)

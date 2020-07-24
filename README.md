@@ -44,7 +44,7 @@ def __init__(
 
 Raspberry Pi Pinout     |  74HC595 Pinout
 :-------------------------:|:-------------------------:
-![Raspberry Pi Pinout](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/Pi_pinout.jpg)  |  ![74HC595 Pinout](https://github.com/2kofawsome/pi74HC595/blob/master/READMEimages/74HC595_pinout.png)
+![Raspberry Pi Pinout](https://raw.githubusercontent.com/2kofawsome/pi74HC595/master/READMEimages/Pi_pinout.jpg)  |  ![74HC595 Pinout](https://raw.githubusercontent.com/2kofawsome/pi74HC595/master/READMEimages/74HC595_pinout.png)
 
 <p align="center"><i>Both Vcc and MR require 5V</i></p>
 

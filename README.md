@@ -42,8 +42,8 @@ def __init__(
 
 ### Pin Numbering
 
-<img alt="Pin Numbering Example" src="https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg" height="300">
-<img alt="74HC595 Pinout" src="https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png" height="150">
+![Pin Numbering Example](https://cdn.sparkfun.com/assets/learn_tutorials/4/2/4/header_pinout.jpg) ![74HC595 Pinout](https://mecany.com/wp-content/uploads/2018/01/74HC595-Pin-Config-300x246.png)
+
 
 <p style="text-align: center;"><i>Both Vcc and MR require 5V</i></p>
 

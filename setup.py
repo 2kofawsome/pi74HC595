@@ -7,7 +7,7 @@ setup(
     name="pi74HC595",
     author="Sam Gunter",
     author_email="samgunter12@gmail.com",
-    version="1.2.1",
+    version="1.2.2",
     license="MIT",
     keywords="Raspberry Pi GPIO 74HC595",
     url="https://github.com/2kofawsome/pi74HC595",

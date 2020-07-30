@@ -14,10 +14,31 @@ Allows for easy use of the 74HC595 Shift Register with a Raspberry Pi
 $ pip install pi74HC595
 ```
 
+## Hardware
+
+Raspberry Pi Pinout     |  74HC595 Pinout
+:-------------------------:|:-------------------------:
+![Raspberry Pi Pinout](https://raw.githubusercontent.com/2kofawsome/pi74HC595/master/READMEimages/Pi_pinout.jpg)  |  ![74HC595 Pinout](https://raw.githubusercontent.com/2kofawsome/pi74HC595/master/READMEimages/74HC595_pinout.png)
+
+You will need to connect:
+
+- Vcc and MR to 5V
+
+- GND to Ground
+
+- Ds to any GPIO pin (DS pin during initialization)
+
+- STcp to any GPIO pin (ST pin during initialization)
+
+- SHcp to any GPIO pin (SH pin during initialization)
+
+- Q0 -> Q7 to anything you want to output to (not all have to be used)
+
+- Q7' to Ds on the next pi74HC595 if Daisy Chaining (multiple 74HC595s in series)
 
 ## Initialize pi74HC595 class
 
-You should install the stockfish engine in your operating system globally or specify path to binary file in class constructor
+gpio.setmode() can be either gpio.BOARD or gpio.BCM (pin numbering vs GPIO numbering).
 
 ```python
 from pi74HC595 import pi74HC595
@@ -27,13 +48,13 @@ gpio.setmode(gpio.BOARD)
 shift_register = pi74HC595()
 ```
 
-<p align="center"><i>This package uses gpio.BOARD (pin numbering as opposed to GPIO numbering)</i></p>
+<p align="center"><i>This package's default pins assumes gpio.BOARD as default</i></p>
 
 ### There are some default settings:
 
 ```python
 def __init__(
-        DS: int = 11,
+        DS: int = 11, # gpio.BOARD
         ST: int = 13,
         SH: int = 15,
         daisy_chain: int = 1,
@@ -42,13 +63,7 @@ def __init__(
 
 ### Pin Numbering
 
-Raspberry Pi Pinout     |  74HC595 Pinout
-:-------------------------:|:-------------------------:
-![Raspberry Pi Pinout](https://raw.githubusercontent.com/2kofawsome/pi74HC595/master/READMEimages/Pi_pinout.jpg)  |  ![74HC595 Pinout](https://raw.githubusercontent.com/2kofawsome/pi74HC595/master/READMEimages/74HC595_pinout.png)
-
-<p align="center"><i>Both Vcc and MR require 5V</i></p>
-
-You will likely need to change the Raspberry Pi pins during initialization. 
+You will likely need to change the Raspberry Pi pins during initialization. Remember to check whether you used gpio.BOARD or gpio.BCM in your program.
 ```python
 shift_register = pi74HC595(7, 37, 22)
 ```
@@ -125,7 +140,7 @@ shift_register.get_values()
 
 ## Good 74HC595 Tutorials
 
-It took me awhile to finally understand how the 74HC595 worked since I had no prior hardware experience. These are the tutorials I used to understand the shift register.
+It took me a while to finally understand how the 74HC595 worked since I had no prior hardware experience. These are the tutorials I used to understand the shift register.
 
 [Great but with Arduino](https://lastminuteengineers.com/74hc595-shift-register-arduino-tutorial/)
 

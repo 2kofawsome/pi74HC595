@@ -149,7 +149,7 @@ class pi74HC595:
         elif value < 0:
             raise ValueError("Argument cannot be negative")
 
-        self._set_values(list(bin(value)[2:]))
+        self._set_values(list(map(int, bin(value)[2:])))
 
     def set_by_bool(self, value: bool):
         """
